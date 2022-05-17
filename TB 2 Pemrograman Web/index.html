@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="witdh=device-width, initial-scale=1">
+    <title> My Profile Website </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+        <!-- bagian sidebar -->
+        <input type="checkbox" id="check">
+        <div class="sidebar">
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <!-- bagian header -->
+        <header> 
+            <div class="container1">
+                <h1><a href=""><span class="efek-ngetik"></span></a></h1>
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Skills</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+
+                <!-- menu mobile-->
+                <label for="check" class="mobile-menu"><i class="fa-solid fa-bars fa-2x"></i></label>
+            </div>
+        </header>
+
+        <!-- bagian banner-->
+        <section class="banner">
+            <img src="img/septo.png" class="imgprofile">
+            <div class="container">
+                <br>
+                <h2 class="data-profile">Hi</h2>
+                <br>
+                <h3 class="data-profile2">My name is Septo Adrianto Azhar</h3>
+                <br> 
+                <br>
+                <br>
+                <br>
+                <p class="data-profile1">Welcome to My Profile Website</p>
+            </div>
+        </section>
+        <br>
+
+        <!-- bagian about-->
+        <section id="about">
+			<div class="container">
+				<h4>About</h4>
+                <br>
+				<p class="data-profile3">I am a student from Mercu Buana Warung Buncit University. <br>
+                    I like playing online games and watching anime.</p> 
+			</div>
+		</section>
+        <br>
+
+        <!-- bagian skills -->
+        <section id="skills">
+            <div class="container">
+                <h4 class="container2">Skills</h4>
+                <h5>HTML</h5>
+                <div class="bar">
+                    <span class="nilai html">80%</span>
+                </div>
+
+                <h5>CSS</h5>
+                <div class="bar">
+                    <span class="nilai css">70%</span>
+                </div>
+
+                <h5>Javascript</h5>
+                <div class="bar">
+                    <span class="nilai js">70%</span>
+                </div>
+            </div>
+        </section>
+        <br>
+
+        <!-- bagian contact -->
+		<section id="contact">
+			<div class="container2">
+				<h4 class="container2">Contact</h4>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+				<div class="col-3">
+					<h3 class="container2">Alamat</h3>
+					<p class="data-profile4"><br>Jl. Balai Rakyat, Kayu Tinggi, Jakarta Timur</p>
+				</div>
+
+				<div class="col-3">
+					<h3 class="container2">Email</h3>
+					<p class="data-profile4"><br>septoadrianto28@gmail.com</p>
+				</div>
+
+				<div class="col-3">
+					<h3 class="container2">Telp/Hp</h3>
+					<p class="data-profile4"><br>+62 838 9314 3527</p>
+				</div>	
+			</div>
+            <br>
+            <br>
+		</section>
+        <script src="js/script.js"></script>
+        <br>
+
+        <!--bagian social media-->
+        <section id="social-media">
+            <div class="container">
+                <div class="banner1">
+                    <div1 class="anime">
+                        <h4 class="container2">Tinggalkan Komentar</h4>
+                        <form action="#" method="POST" onSubmit="validasi()">
+                            <br>
+                            <h6>Komentar : </h6>
+                            <input type="text" class="message" id="message" name="message" placeholder="Message...">
+                            <br>
+                            <br>
+                            <h6>Rating untuk Website Saya : </h6>
+                            <select id="rating" name="rating">
+                                <option value="0" selected="">--Select Rating--</option>
+                                <option value="VG">(5) ★★★★★ </option>
+                                <option value="GD">(4) ★★★★☆ </option>
+                                <option value="GR">(3) ★★★☆☆ </option>
+                                <option value="B">(2) ★★☆☆☆ </option>
+                                <option value="VB">(1) ★☆☆☆☆ </option>
+                                    </select>
+                            <div>    
+                                <center><input type="submit" value="Submit" class="tombol"></center>
+                            </div>
+                        </form>
+                <br>
+                <br>
+                    </div1>
+                </div>
+            </div>
+            <p class="data-profile1"><br>Follow my other social media below : </p>
+            <br>
+            <a class="youtube" href="confirmAction1(youtube)" onclick="confirmAction1()">
+                <span class="fab fa-youtube"></span></a>
+            <a class="facebook" href="confirmAction2(facebook)" onclick="confirmAction2()">
+                <span class="fab fa-facebook"></span></a>
+            <a class="discord" href="confirmAction3(discord)" onclick="confirmAction3()">
+                <span class="fab fa-discord"></span></a>
+            <a class="twitch" href="confirmAction4(twitch)" onclick="confirmAction4()">
+                <span class="fab fa-twitch"></span></a>
+            <a class="instagram" href="confirmAction5(instagram)" onclick="confirmAction5()">
+                <span class="fab fa-instagram"></span></a>
+                <br>
+                <br>
+                <br>
+        </section>
+        <script>
+            var s = new Date();
+            document.write("<b>Waktu Saat Ini : </b>" + s.toString());
+            function confirmAction1(youtube){
+                let confirmAction1 = confirm("Go to Youtube?");
+                if (confirmAction1) {
+                    alert("Proceed to Youtube");
+                    window.open('https://www.youtube.com/channel/UCZ8y7Y86yyzQcovJefFw7dg');
+                } else {
+                    alert ("Cancel to Youtube");
+                }
+            }
+            function confirmAction2(facebook){
+                let confirmAction2 = confirm("Go to Facebook?");
+                if (confirmAction2) {
+                    alert("Proceed to Facebook");
+                    window.open('https://www.facebook.com/Booedoet52');
+                } else {
+                    alert ("Cancel to Facebook");
+                }
+            }
+            function confirmAction3(discord){
+                let confirmAction3 = confirm("Go to Discord Developer Portal?");
+                if (confirmAction3) {
+                    alert("Proceed to Discord Developer Portal");
+                    window.open('https://discord.com/developers/applications/813826322622709771/bot');
+                } else {
+                    alert ("Cancel to Discord Developer Portal");
+                }
+            }
+            function confirmAction4(twitch){
+                let confirmAction4 = confirm("Go to Twitch?");
+                if (confirmAction4) {
+                    alert("Proceed to Twitch");
+                    window.open('https://www.twitch.tv/yuzuru_otonashii');
+                } else {
+                    alert ("Cancel to Twitch");
+                }
+            }
+            function confirmAction5(instagram){
+                let confirmAction5 = confirm("Go to Instagram");
+                if (confirmAction5) {
+                    alert("Proceed to Instagram");
+                    window.open('https://www.instagram.com/yuzuru_82/');
+                } else {
+                    alert ("Cancel to Instagram");
+                }
+            }
+        </script>
+    </body>
+</html>
